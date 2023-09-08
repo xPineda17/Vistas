@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albumes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Lista de Albumes</h2>
+        <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#createModal">Agregar Album</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Titulo</th>
+                    <th>Año</th>
+                    <th>Descripcion</th>
+                    <th>Medio</th>
+                    <th>Usuario</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>11</td>
+                    <td>Desde el fin del mundo</td>
+                    <td>2021</td>
+                    <td>Album musical de Duki</td>
+                    <td>CD</td>
+                    <td>Pepito</td>
+                    <td>
+                        <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#editModal">Editar</button>
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Homerun</td>
+                    <td>2019</td>
+                    <td>Album musical de Paulo Londra</td>
+                    <td>CD</td>
+                    <td>Carlitos</td>
+                    <td>
+                        <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#editModal">Editar</button>
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>33</td>
+                    <td>Houses of the Holy</td>
+                    <td>1973</td>
+                    <td>Album musical de Led Zeppelin</td>
+                    <td>Disco</td>
+                    <td>Juanito</td>
+                    <td>
+                        <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#editModal">Editar</button>
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal fade" id="createModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Agregar Nuevo Album</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="id">ID:</label>
+                            <input type="number" class="form-control" id="id">
+                        </div>
+                        <div class="form-group">
+                            <label for="titulo">Titulo:</label>
+                            <input type="text" class="form-control" id="titulo">
+                        </div>
+                        <div class="form-group">
+                            <label for="anio">Año:</label>
+                            <input type="number" class="form-control" id="anio">
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcion">Descripcion:</label>
+                            <input type="text" class="form-control" id="descripcion">
+                        </div>
+                        <div class="form-group">
+                            <label for="medio">Medio:</label>
+                            <select class="form-control" id="medio">
+                                <option value="sel">Seleccionar</option>
+                                <option value="opcion1">Disco</option>
+                                <option value="opcion2">Casete</option>
+                                <option value="opcion3">CD</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="usuario">Usuario:</label>
+                            <input type="text" class="form-control" id="usuario">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="editModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Editar Album</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="tituloEdit">Titulo:</label>
+                            <input type="text" class="form-control" id="tituloEdit">
+                        </div>
+                        <div class="form-group">
+                            <label for="anioEdit">Año:</label>
+                            <input type="number" class="form-control" id="anioEdit">
+                        </div>
+                        <div class="form-group">
+                            <label for="descEdit">Descripcion:</label>
+                            <input type="text" class="form-control" id="descEdit">
+                        </div>
+                        <div class="form-group">
+                            <label for="medioEdit">Medio:</label>
+                            <select class="form-control" id="medioEdit">
+                                <option value="sel">Seleccionar</option>
+                                <option value="opcion1">Disco</option>
+                                <option value="opcion2">Casete</option>
+                                <option value="opcion3">CD</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="usuarioEdit">Usuario:</label>
+                            <input type="text" class="form-control" id="usuarioEdit">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Guardar Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

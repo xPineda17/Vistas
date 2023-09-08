@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canciones</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Lista de Canciones</h2>
+        <button class="btn btn-primary mb-3" data-toggle="modal" data-target="#createModal">Agregar Cancion</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Titulo</th>
+                    <th>Minutos</th>
+                    <th>Segundos</th>
+                    <th>Interprete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Domingo</td>
+                    <td>3</td>
+                    <td>10</td>
+                    <td>Milo J</td>
+                    <td>
+                        <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#editModal">Editar</button>
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Superstars</td>
+                    <td>3</td>
+                    <td>32</td>
+                    <td>Kidd Keo</td>
+                    <td>
+                        <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#editModal">Editar</button>
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>She Don't Give a Fo</td>
+                    <td>3</td>
+                    <td>29</td>
+                    <td>Duki, KHEA</td>
+                    <td>
+                        <button class="btn btn-info btn-sm" data-toggle="modal" data-target="#editModal">Editar</button>
+                        <button class="btn btn-danger btn-sm">Eliminar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="modal fade" id="createModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Agregar Nueva Cancion</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="id">ID:</label>
+                            <input type="number" class="form-control" id="id">
+                        </div>
+                        <div class="form-group">
+                            <label for="titulo">Titulo:</label>
+                            <input type="text" class="form-control" id="titulo">
+                        </div>
+                        <div class="form-group">
+                            <label for="minutos">Minutos:</label>
+                            <input type="number" class="form-control" id="minutos">
+                        </div>
+                        <div class="form-group">
+                            <label for="segundos">Segundos:</label>
+                            <input type="number" class="form-control" id="segundos">
+                        </div>
+                        <div class="form-group">
+                            <label for="interprete">Interprete:</label>
+                            <input type="text" class="form-control" id="interprete">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="editModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Editar Cancion</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="tituloEdit">Titulo:</label>
+                            <input type="text" class="form-control" id="tituloEdit">
+                        </div>
+                        <div class="form-group">
+                            <label for="minEdit">Minutos:</label>
+                            <input type="text" class="form-control" id="minEdit">
+                        </div>
+                        <div class="form-group">
+                            <label for="segEdit">Segundos:</label>
+                            <input type="text" class="form-control" id="segEdit">
+                        </div>
+                        <div class="form-group">
+                            <label for="intEdit">Interprete:</label>
+                            <input type="text" class="form-control" id="intEdit">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Guardar Cambios</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
